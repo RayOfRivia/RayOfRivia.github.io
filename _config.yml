@@ -1,0 +1,16 @@
+name: Ray Of Rivia
+url: http://github.io/RayOfRivia
+description: Personal Technical Blog with Resume
+
+permalink: /themes/:title/
+
+gems: [jekyll-paginate]
+
+highlighter: pygments
+paginate: 20
+
+markdown: rdiscount
+rdiscount:
+    extensions: ['smart']
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
