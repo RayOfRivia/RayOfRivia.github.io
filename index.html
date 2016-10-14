@@ -1,59 +1,66 @@
 ---
 layout: default
-title: Jekyll Themes
 ---
 
-<div class="gallery">
-	{% for post in paginator.posts %}
-		<div class="item">
-			<a class="item-inner" href="{{ post.url }}">
-				<div class="item-image"><img src="/thumbnails/{{ post.thumbnail }}"></div>
-				<div class="item-name">{{ post.title }}</div>
-			</a>
-		</div>
-	{% endfor %}
+<div>
+
+  <section>
+    <h1>Jekyll theme based on hack.css</h1>
+
+    <p>
+      Mobile-ready, modern, stylish, simple.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is Jekyll?</h2>
+
+    <p>
+      <code>Jekyll</code> is a simple, blog-aware, static site generator
+      perfect for personal, project,
+      or organization sites. Think of it like a
+      file-based CMS, without all the complexity.
+      <code>Jekyll</code> takes your content, renders Markdown
+      and Liquid templates, and spits out a
+      complete, static website ready to be served by Apache,
+      Nginx or another web server.
+      <code>Jekyll</code> is the engine behind GitHub Pages,
+      which you can use to host sites right
+      from your GitHub repositories.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is hack.css?</h2>
+
+    <p>
+      <code>hack.css</code> is a dead simple css framework. Chech out
+      <a href="http://hackcss.com/">hackcss.com</a> to know more.
+    </p>
+  </section>
+
+  <section>
+    <h2>Getting started</h2>
+
+    <p>
+      <ol>
+        <li>Make sure you have <code>Jekyll</code> up and running</li>
+        <li>Clone
+          <a href="https://github.com/wemake-services/jekyll-theme-hackcss">this repository</a>
+        </li>
+        <li>Customize it</li>
+        <li>Push to <a href="https://pages.github.com/">gh-pages</a></li>
+      </ol>
+
+    </p>
+  </section>
+
+  <section>
+    <h2>Subscribe</h2>
+
+    <p>
+      subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+    </p>
+  </section>
+
 </div>
-
-<!-- Pager -->
-
-<div class="row-fluid">
-  <div class="span12">
-    <div class="pagination">
-      <ul>
-        {% if paginator.previous_page %}
-
-          {% if paginator.previous_page == 1 %}
-            <li><a href="/">Prev</a></li>
-          {% else %}
-            <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
-
-        {% else %}
-          <li><span class="disabled">Prev</span></li>
-        {% endif %}
-
-        {% if paginator.page == 1 %}
-          <li><span class="active">1</span></li>
-        {% else %}
-          <li><a href="/">1</a></li>
-        {% endif %}
-
-        {% for count in (2..paginator.total_pages) %}
-
-          {% if count == paginator.page %}
-            <li><span class="active">{{ count }}</span></li>
-          {% else %}
-            <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
-
-        {% if paginator.next_page %}
-          <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-          <li><span class="disabled">Next</span></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</div>
-
